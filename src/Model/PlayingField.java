@@ -160,17 +160,17 @@ public class PlayingField {
             for (UnsortedPile f : UnsortedPile.values()) {
                 if (unsortedPileArrayListEnumMap.get(f).isEmpty()) {
                     int i = unsortedPileArrayListEnumMap.get(e).indexOf(fromCard);
-                    System.out.println("i playingfied längd på listor " + i + " "+ unsortedPileArrayListEnumMap.get(e).size());
-                    for (int j = i; j < unsortedPileArrayListEnumMap.get(e).size(); j++) {
-                        tempArray.add(unsortedPileArrayListEnumMap.get(e).get(j));
-                    }
-                    unsortedPileArrayListEnumMap.get(f).addAll(tempArray);
-                    for (Card c : tempArray) {
-                        findAndRemoveCard(e, c);
+                    if (i > 0) {
+                        for (int j = i; j < unsortedPileArrayListEnumMap.get(e).size(); j++) {
+                            tempArray.add(unsortedPileArrayListEnumMap.get(e).get(j));
+                        }
+                        unsortedPileArrayListEnumMap.get(f).addAll(tempArray);
+                        for (Card c : tempArray) {
+                            findAndRemoveCard(e, c);
+                        }
                     }
                 }
             }
-
         }
     }
 
