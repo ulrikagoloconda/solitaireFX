@@ -39,17 +39,24 @@ public class Control implements ControlInterface {
 
     private boolean checkMatch() {
         boolean returnBol = false;
+        int iTo = 0;
+        if(Character.isDigit(toCard.getId().charAt(1))) {
+             iTo = Integer.parseInt(toCard.getId().substring(1));
+        }
+        int iFrom = Integer.parseInt(fromCard.getId().substring(1));
+
+
         if (toCard.equals(fromCard)) {
             return false;
         }
 
         if (toCard.getId().equals("target")) {
-            if (fromCard.getId().charAt(1) == '1') {
+            if (iFrom == 1) {
                 playingField.moveCardToEmptyTarget(fromCard);
                 returnBol = true;
             }
         } else if (toCard.getId().equals("targetKing")) {
-            if (fromCard.getId().contains("13")) {
+            if (iFrom == 13) {
                 for (UnsortedPile e : UnsortedPile.values()) {
                     if (e.equals(fromEnum)) {
                         playingField.moveKingToEmptyTarget(e, fromCard);
@@ -63,7 +70,7 @@ public class Control implements ControlInterface {
 
         } else if (toEnum instanceof SuitPile) {
             if (toCard.getId().charAt(0) == fromCard.getId().charAt(0)) {
-                if (toCard.getId().charAt(1) == (fromCard.getId().charAt(1) - 1)) {
+                if (iTo == iFrom-1) {
                     playingField.moveCardToSuitPile(fromCard, toCard);
                     returnBol = true;
                 }
@@ -72,10 +79,7 @@ public class Control implements ControlInterface {
 
             if (toCard.getId().charAt(0) == 'h' || toCard.getId().charAt(0) == 'd') {
                 if (fromCard.getId().charAt(0) == 'c' || fromCard.getId().charAt(0) == 's'){
-
-                    int to = Integer.parseInt(toCard.getId().substring(1));
-                    int from = Integer.parseInt(fromCard.getId().substring(1));
-                    if(from == to-1){
+                    if(iFrom == (iTo-1)){
                         returnBol = true;
                         playingField.moveCardsToUnsortedPile(fromCard, toCard);
                     }
@@ -83,17 +87,12 @@ public class Control implements ControlInterface {
                 }
             } else if (toCard.getId().charAt(0) == 'c' || toCard.getId().charAt(0) == 's') {
                 if (fromCard.getId().charAt(0) == 'h' || fromCard.getId().charAt(0) == 'd') {
-
-                   int to = Integer.parseInt(toCard.getId().substring(1));
-                    int from = Integer.parseInt(fromCard.getId().substring(1));
-                    if(from == to-1){
+                    if(iFrom == iTo-1){
                         returnBol = true;
                         playingField.moveCardsToUnsortedPile(fromCard, toCard);
                     }
                 }
             }
-
-
         }
 
             return returnBol;

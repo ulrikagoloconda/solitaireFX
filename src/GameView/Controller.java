@@ -17,6 +17,7 @@ import javafx.scene.layout.GridPane;
 import java.net.URL;
 import java.util.*;
 import javafx.scene.*;
+import javafx.scene.text.Text;
 
 
 public class Controller implements Initializable {
@@ -107,6 +108,18 @@ public class Controller implements Initializable {
         }
     }
 
+    public void checkWin(){
+       int i = 0;
+        for(UnsortedPile e : UnsortedPile.values()){
+           if(unsortedPileCardEnumMap.get(e).isEmpty()){
+              i++;
+           }
+        }
+        if(i == 7){
+            System.out.println("Grattis, du har vunnit!");
+        }
+
+    }
     public void updateLokalField() {
         unsortedPileCardEnumMap = playingField.getUnsortedPileEnumMap();
 
@@ -115,6 +128,7 @@ public class Controller implements Initializable {
         updateUnsortedPiles();
         upDateSuitPiles();
         upDateBigPile();
+        checkWin();
     }
 
     public boolean addEmptyTarget(UnsortedPile e) {
@@ -126,8 +140,8 @@ public class Controller implements Initializable {
                 if (!kingInUse.contains(iv)) {
                     observableUnsortedMap.get(e).clear();
                     observableUnsortedMap.get(e).add(iv);
-                    Image i = new Image("GameView/icon/b1fv.png");
-                    iv.setImage(i);
+                  //  Image i = new Image("GameView/icon/b1fv.png");
+                  //  iv.setImage(i);
                     kingInUse.add(iv);
                     returnBol = true;
                     return returnBol;
@@ -138,12 +152,11 @@ public class Controller implements Initializable {
     }
 
     private void removeEmptyKingTargets(UnsortedPile e) {
+        if(!unsortedPileCardEnumMap.get(e).isEmpty())
         for (ImageView iv : kings) {
             if (observableUnsortedMap.get(e).contains(iv)) {
-                if (observableUnsortedMap.get(e).size() > 1) {
                     observableUnsortedMap.get(e).remove(iv);
                     kingInUse.remove(iv);
-                }
 
             }
         }
@@ -169,8 +182,6 @@ public class Controller implements Initializable {
 
 
     public void updateUnsortedPiles() {
-        System.out.println(unsortedPileCardEnumMap);
-        System.out.println(suitPileCardEnumMap);
         ArrayList<Node> tempList = new ArrayList<>();
         for (UnsortedPile e : UnsortedPile.values()) {
             if (unsortedPileCardEnumMap.get(e).size() == 0) {
@@ -202,8 +213,6 @@ public class Controller implements Initializable {
             if (i > 0) {
                 String id = suitPileCardEnumMap.get(e).get(i - 1).getId();
                 ImageView iv = null;
-                System.out.println(id);
-
                 for (Map.Entry<ImageView, String> entry : nodeStringMap.entrySet()) {
                     if (entry.getValue().equals(id)) {
                         iv = entry.getKey();
@@ -234,7 +243,6 @@ public class Controller implements Initializable {
             }
         }
     }
-
 
     private void showFaceUpCards() {
         gameModel.openClosedCards();
@@ -390,14 +398,11 @@ public class Controller implements Initializable {
 
         for (GridPane gp : unsortedGridPanes) {
             gp.getStyleClass().add("grid");
-
         }
 
         for (GridPane gp : suitGridPanes) {
             gp.getStyleClass().add("suitGrid");
         }
-
-
         initStartField();
     }
 }
