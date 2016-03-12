@@ -1,0 +1,30 @@
+
+.imageBorder {
+
+ -fx-border-color: #2e8b57;
+    -fx-border-width: 10px;
+    -fx-background-color: with;
+
+}
+
+.imageView {
+ -fx-border-color: #2e8b57;
+    -fx-border-width: 10px;
+    -fx-background-color: red;
+
+}
+
+.root {
+
+
+}
+
+.grid {
+   /* -fx-vgap: -5;*/
+
+}
+
+.suitGrid {
+ -fx-vgap: 0;
+
+}

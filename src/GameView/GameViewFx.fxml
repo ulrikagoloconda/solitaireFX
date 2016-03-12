@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameView.Controller">
+   <children>
+      <GridPane fx:id="pile1" onDragOver="#handleOnDragOver" prefHeight="50.0" prefWidth="55.0" vgap="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="130.0">
+         <columnConstraints>
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="52.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <GridPane fx:id="pile2" prefHeight="50.0" prefWidth="55.0" vgap="5.0" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="130.0">
+         <columnConstraints>
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="52.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <GridPane fx:id="pile3" layoutX="176.0" layoutY="124.0" prefHeight="50.0" prefWidth="55.0" vgap="5.0" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="130.0">
+         <columnConstraints>
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="52.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="row3" fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="130.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <GridPane fx:id="pile4" layoutX="50.0" layoutY="50.0" prefHeight="50.0" prefWidth="55.0" vgap="5.0" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="130.0">
+         <columnConstraints>
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fx:id="row2" fitHeight="70.0" fitWidth="52.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="row2" fitHeight="70.0" fitWidth="55.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="130.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="80.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <GridPane fx:id="pile5" layoutX="50.0" layoutY="50.0" prefHeight="50.0" prefWidth="55.0" vgap="5.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="130.0">
+         <columnConstraints>
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="52.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="130.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="80.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="150.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <GridPane fx:id="pile6" prefHeight="50.0" prefWidth="55.0" vgap="5.0" AnchorPane.leftAnchor="310.0" AnchorPane.topAnchor="130.0">
+         <columnConstraints>
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="15.0" prefHeight="40.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="52.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="80.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="150.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="row7" fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="190.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="110.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <GridPane fx:id="pile7" prefHeight="50.0" prefWidth="55.0" vgap="5.0" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="130.0">
+         <columnConstraints>
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="-Infinity" minHeight="15.0" prefHeight="40.0" />
+            <RowConstraints maxHeight="-Infinity" minHeight="15.0" prefHeight="40.0" />
+            <RowConstraints maxHeight="-Infinity" minHeight="15.0" prefHeight="40.0" />
+            <RowConstraints maxHeight="-Infinity" minHeight="15.0" prefHeight="40.0" />
+            <RowConstraints maxHeight="-Infinity" minHeight="15.0" prefHeight="40.0" />
+            <RowConstraints maxHeight="-Infinity" minHeight="15.0" prefHeight="40.0" />
+            <RowConstraints maxHeight="-Infinity" minHeight="15.0" prefHeight="40.0" />
+            <RowConstraints maxHeight="-Infinity" minHeight="15.0" prefHeight="40.0" />
+            <RowConstraints maxHeight="-Infinity" minHeight="15.0" prefHeight="40.0" valignment="CENTER" />
+            <RowConstraints maxHeight="-Infinity" minHeight="15.0" prefHeight="40.0" valignment="CENTER" />
+            <RowConstraints maxHeight="-Infinity" minHeight="15.0" prefHeight="40.0" valignment="CENTER" />
+            <RowConstraints maxHeight="-Infinity" minHeight="15.0" prefHeight="40.0" valignment="CENTER" />
+            <RowConstraints maxHeight="-Infinity" minHeight="15.0" prefHeight="40.0" valignment="CENTER" />
+            <RowConstraints maxHeight="-Infinity" minHeight="15.0" prefHeight="40.0" valignment="CENTER" />
+         </rowConstraints>
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="52.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="row1" fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="130.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="80.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="150.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="row1" fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="190.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="row11" fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="60.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <GridPane fx:id="bigPile" layoutX="14.0" layoutY="24.0" prefHeight="70.0" prefWidth="52.0" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="25.0">
+        <columnConstraints>
+          <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="55.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" GridPane.valignment="BOTTOM">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="52.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="52.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="10.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="10.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="10.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="10.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="10.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="10.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="52.0" layoutX="10.0" layoutY="10.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="52.0" layoutX="10.0" layoutY="10.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="10.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="10.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="10.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="10.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="10.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="52.0" layoutX="10.0" layoutY="10.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="52.0" layoutX="10.0" layoutY="10.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="52.0" layoutX="10.0" layoutY="10.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="10.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="55.0" layoutX="10.0" layoutY="10.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="70.0" fitWidth="52.0" layoutX="10.0" layoutY="10.0" onDragDetected="#handleOnDragDetected" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <GridPane fx:id="smallPile1" prefHeight="79.0" prefWidth="62.0" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="25.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="target" fitHeight="70.0" fitWidth="55.0" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </GridPane>
+      <GridPane fx:id="smallPile2" prefHeight="79.0" prefWidth="62.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="25.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="55.0" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </GridPane>
+      <GridPane fx:id="smallPile3" prefHeight="79.0" prefWidth="62.0" AnchorPane.leftAnchor="310.0" AnchorPane.topAnchor="25.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="55.0" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </GridPane>
+      <GridPane fx:id="smallPile4" prefHeight="79.0" prefWidth="62.0" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="25.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fx:id="target" fitHeight="70.0" fitWidth="55.0" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </GridPane>
+      <GridPane fx:id="smallPile11" layoutX="210.0" layoutY="35.0" prefHeight="79.0" prefWidth="62.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="25.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="70.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="55.0" onMouseClicked="#handleOnClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icon/b1fv.png" />
+               </image>
+            </ImageView>
+         </children>
+      </GridPane>
+      <Button fx:id="knapp" layoutX="598.0" layoutY="182.0" mnemonicParsing="false" text="Button" />
+      <ImageView fx:id="targetKing1" fitHeight="79.0" fitWidth="62.0" layoutX="467.0" layoutY="332.0" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon/b1fv.png" />
+         </image></ImageView>
+      <ImageView fx:id="targetKing2" fitHeight="79.0" fitWidth="62.0" layoutX="477.0" layoutY="342.0" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon/b1fv.png" />
+         </image></ImageView>
+      <ImageView fx:id="targetKing3" fitHeight="79.0" fitWidth="62.0" layoutX="487.0" layoutY="352.0" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon/b1fv.png" />
+         </image></ImageView>
+      <ImageView fx:id="targetKing4" fitHeight="79.0" fitWidth="62.0" layoutX="497.0" layoutY="362.0" onDragDropped="#handleOnDragDropped" onDragOver="#handleOnDragOver" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon/b1fv.png" />
+         </image></ImageView>
+   </children>
+</AnchorPane>
