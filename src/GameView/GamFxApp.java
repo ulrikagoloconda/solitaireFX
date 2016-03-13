@@ -21,8 +21,6 @@ Controller clr;
         primaryStage.show();
     }
 
-
-
     public void enterGame() {
         launch();
     }

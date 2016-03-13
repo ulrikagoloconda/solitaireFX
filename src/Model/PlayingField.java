@@ -147,12 +147,13 @@ public class PlayingField {
         }
     }
 
-    public void moveKingToEmptyTarget(UnsortedPile e, Card fromCard) {
+    public boolean moveKingToEmptyTarget(UnsortedPile e, Card fromCard) {
         if (bigPile.contains(fromCard)) {
             for (UnsortedPile f : UnsortedPile.values()) {
                 if (unsortedPileArrayListEnumMap.get(f).isEmpty()) {
                     unsortedPileArrayListEnumMap.get(f).add(fromCard);
                     bigPile.remove(fromCard);
+                    return true;
                 }
             }
         } else {
@@ -168,10 +169,12 @@ public class PlayingField {
                         for (Card c : tempArray) {
                             findAndRemoveCard(e, c);
                         }
+                        return true;
                     }
                 }
             }
         }
+        return false;
     }
 
 

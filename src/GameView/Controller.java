@@ -140,8 +140,6 @@ public class Controller implements Initializable {
                 if (!kingInUse.contains(iv)) {
                     observableUnsortedMap.get(e).clear();
                     observableUnsortedMap.get(e).add(iv);
-                  //  Image i = new Image("GameView/icon/b1fv.png");
-                  //  iv.setImage(i);
                     kingInUse.add(iv);
                     returnBol = true;
                     return returnBol;
@@ -152,13 +150,24 @@ public class Controller implements Initializable {
     }
 
     private void removeEmptyKingTargets(UnsortedPile e) {
-        if(!unsortedPileCardEnumMap.get(e).isEmpty())
-        for (ImageView iv : kings) {
-            if (observableUnsortedMap.get(e).contains(iv)) {
-                    observableUnsortedMap.get(e).remove(iv);
-                    kingInUse.remove(iv);
-
+        ImageView tempIv = null;
+        Card tempCard = null;
+        if (!unsortedPileCardEnumMap.get(e).isEmpty()) {
+            for (Node n : observableUnsortedMap.get(e)) {
+                for (ImageView iv : kings) {
+                    if (n.equals(iv)) {
+                        tempIv = iv;
+                        kingInUse.remove(iv);
+                        for(Card c : unsortedPileCardEnumMap.get(e)){
+                            if(c.getId().equals(nodeStringMap.get(iv))){
+                                tempCard = c;
+                            }
+                        }
+                    }
+                }
             }
+            observableUnsortedMap.get(e).remove(tempIv);
+            unsortedPileCardEnumMap.get(e).remove(tempCard);
         }
     }
 
@@ -283,7 +292,6 @@ public class Controller implements Initializable {
     private void setStringNodList(UnsortedPile e, ObservableList<Node> nodList) {
         int count = 0;
         ArrayList<Card> tempList = unsortedPileCardEnumMap.get(e);
-        System.out.println(e);
         for (Node n : nodList) {
             nodeStringMap.put((ImageView) n, tempList.get(count).getId());
             count++;
@@ -373,7 +381,6 @@ public class Controller implements Initializable {
         kings.add(targetKing2);
         kings.add(targetKing3);
         kings.add(targetKing4);
-
 
         unsortedPileCardEnumMap = playingField.getUnsortedPileEnumMap();
         suitPileCardEnumMap = playingField.getSuitPileArrayListEnumMap();
