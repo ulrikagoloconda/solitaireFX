@@ -76,11 +76,13 @@ public class Controller implements Initializable {
 
     public void handleOnClicked(MouseEvent event) {
         try {
-            Node ivTemp = frechBigPileObservable.remove(frechBigPileObservable.size() - 1);
-            frechBigPileObservable.add(0, ivTemp);
-            Card c = frechBigPileCardList.remove(frechBigPileCardList.size() - 1);
-            frechBigPileCardList.add(0, c);
-            showFaceUpCards();
+            if(frechBigPileObservable.size()>0) {
+                Node ivTemp = frechBigPileObservable.remove(frechBigPileObservable.size() - 1);
+                frechBigPileObservable.add(0, ivTemp);
+                Card c = frechBigPileCardList.remove(frechBigPileCardList.size() - 1);
+                frechBigPileCardList.add(0, c);
+                showFaceUpCards();
+            }
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -115,7 +117,8 @@ public class Controller implements Initializable {
               i++;
            }
         }
-        if(i == 7){
+        if(i >= 7){
+
             System.out.println("Grattis, du har vunnit!");
         }
 

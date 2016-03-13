@@ -71,8 +71,11 @@ public class Control implements ControlInterface {
         } else if (toEnum instanceof SuitPile) {
             if (toCard.getId().charAt(0) == fromCard.getId().charAt(0)) {
                 if (iTo == iFrom-1) {
-                    playingField.moveCardToSuitPile(fromCard, toCard);
-                    returnBol = true;
+                   int size = playingField.getUnsortedPileEnumMap().get(fromEnum).size();
+                    if(playingField.getUnsortedPileEnumMap().get(fromEnum).get(size-1).equals(fromCard)) {
+                        playingField.moveCardToSuitPile(fromCard, toCard);
+                        returnBol = true;
+                    }
                 }
             }
         } else if (toEnum instanceof UnsortedPile) {
