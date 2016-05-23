@@ -3,11 +3,9 @@ package Control;
 import GameView.Controller;
 import Model.*;
 import javafx.collections.ObservableList;
-import javafx.scene.image.ImageView;
+
 import java.util.ArrayList;
 import java.util.EnumMap;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by Rickard on 2016-01-28.
@@ -71,9 +69,16 @@ public class Control implements ControlInterface {
         } else if (toEnum instanceof SuitPile) {
             if (toCard.getId().charAt(0) == fromCard.getId().charAt(0)) {
                 if (iTo == iFrom-1) {
+                    System.out.println("Körs detta när man vill lägga ");
                    int size = playingField.getUnsortedPileEnumMap().get(fromEnum).size();
+                    System.out.println("fromenum " + fromEnum + "size " + size + " fromCard " + fromCard);
                     if(playingField.getUnsortedPileEnumMap().get(fromEnum).get(size-1).equals(fromCard)) {
+                        System.out.println("körs detta efter den sista ifsatsen ");
                         playingField.moveCardToSuitPile(fromCard, toCard);
+                        returnBol = true;
+                    } else if(playingField.getBigPile().contains(fromCard)) {
+                        System.out.println("Körs detta ist då ");
+                        playingField.moveCardToSuitPile(fromCard,toCard);
                         returnBol = true;
                     }
                 }

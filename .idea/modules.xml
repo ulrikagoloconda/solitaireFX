@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/solitaireFX.iml" filepath="$PROJECT_DIR$/.idea/solitaireFX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/solitaireFX.iml" filepath="$PROJECT_DIR$/solitaireFX.iml" />
     </modules>
   </component>
 </project>

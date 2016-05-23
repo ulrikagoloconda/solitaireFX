@@ -51,6 +51,8 @@ public class PlayingField {
     public void moveCardToSuitPile(Card fromCard, Card toCard) {
         if (toCard.getId().equals("target")) {
             moveCardToEmptyTarget(fromCard);
+        } else if(bigPile.contains(fromCard)) {
+            moveCardFromBigPileToSuitPile(fromCard,toCard);
         } else {
             for (UnsortedPile e : UnsortedPile.values()) {
                 if (unsortedPileArrayListEnumMap.get(e).contains(fromCard)) {
@@ -60,6 +62,7 @@ public class PlayingField {
                     }
                 }
             }
+
             findAndRemoveCard(fromCard);
 
             for (SuitPile e : SuitPile.values()) {
@@ -69,6 +72,17 @@ public class PlayingField {
             }
         }
     }
+
+    private void moveCardFromBigPileToSuitPile(Card fromCard, Card toCard) {
+        for (SuitPile e : SuitPile.values()) {
+            if (suitPileArrayListEnumMap.get(e).contains(toCard)) {
+                suitPileArrayListEnumMap.get(e).add(fromCard);
+            }
+
+        }
+        bigPile.remove(fromCard);
+    }
+
 
 
     public void moveCardsToUnsortedPile(Card fromCard, Card toCard) {
